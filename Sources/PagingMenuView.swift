@@ -425,7 +425,7 @@ open class PagingMenuView: UIScrollView {
         let centerPointX = leftFrame.midX + (rightFrame.midX - leftFrame.midX) * percent
         let offsetX = centerPointX - bounds.width / 2
         let normaizedOffsetX = min(max(minContentOffsetX, offsetX), maxContentOffsetX)
-        focusView.center = CGPoint(x: centerPointX, y: center.y)
+        focusView.center = CGPoint(x: centerPointX, y: bounds.midY)
         
         let expectedIndex = (focusView.center.x < leftFrame.maxX) ? index : rightIndex
         focusView.selectedIndex = max(0, min(expectedIndex, numberOfItem - 1))
