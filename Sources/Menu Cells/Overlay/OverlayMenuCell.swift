@@ -97,9 +97,12 @@ public class OverlayMenuCell: PagingMenuViewCell {
         textMaskView.bounds = bounds.inset(by: maskInsets)
     }
     
-    public func configure(title: String) {
+    public func configure(title: String, textAlignment: NSTextAlignment = .left) {
         titleLabel.text = title
         highlightLabel.text = title
+        
+        titleLabel.textAlignment = textAlignment
+        highlightLabel.textAlignment = textAlignment
     }
     
     public func updateMask(animated: Bool = true) {
