@@ -67,7 +67,7 @@ public class OverlayMenuCell: PagingMenuViewCell {
     
     public static let sizingCell = OverlayMenuCell()
     
-    let maskInsets = UIEdgeInsets(top: 6, left: 2, bottom: 6, right: 2)
+    let maskInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
     
     let textMaskView: UIView = {
         let view = UIView()
@@ -146,7 +146,7 @@ extension OverlayMenuCell {
                 toItem: $0,
                 attribute: .trailing,
                 multiplier: 1,
-                constant: 16)
+                constant: 0)
             let leadingConstraint = NSLayoutConstraint(
                 item: $0,
                 attribute: .leading,
@@ -154,7 +154,7 @@ extension OverlayMenuCell {
                 toItem: self,
                 attribute: .leading,
                 multiplier: 1,
-                constant: 16)
+                constant: 0)
             let bottomConstraint = NSLayoutConstraint(
                 item: self,
                 attribute: .top,
@@ -162,7 +162,7 @@ extension OverlayMenuCell {
                 toItem: $0,
                 attribute: .top,
                 multiplier: 1,
-                constant: 8)
+                constant: 0)
             let topConstraint = NSLayoutConstraint(
                 item: $0,
                 attribute: .bottom,
@@ -170,7 +170,7 @@ extension OverlayMenuCell {
                 toItem: self,
                 attribute: .bottom,
                 multiplier: 1,
-                constant: 8)
+                constant: 0)
             
             addConstraints([topConstraint, bottomConstraint, trailingConstraint, leadingConstraint])
         }
