@@ -67,7 +67,7 @@ public class OverlayMenuCell: PagingMenuViewCell {
     
     public static let sizingCell = OverlayMenuCell()
     
-    let maskInsets = UIEdgeInsets(top: 6, left: 8, bottom: 6, right: 8)
+    let maskInsets = UIEdgeInsets(top: 6, left: 2, bottom: 6, right: 2)
     
     let textMaskView: UIView = {
         let view = UIView()
